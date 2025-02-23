@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: gopher_marketplace
+    working_dir: /container
+    volumes:
+      - .:/container
+    ports:
+      - "8000:8000"
+    command: ["make", "run"]
